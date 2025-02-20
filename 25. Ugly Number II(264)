@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int nthUglyNumber(int n) {
+        if(n<=0) return false; 
+        if(n==1) return true;
+        int t1=0, t2=0, t3=0;
+        vector<int> arr(n);
+        arr[0]=1;
+        for(int i=1;i<n;i++){
+            arr[i]=min(arr[t1]*2,min(arr[t2]*3,arr[t3]*5));
+            if(arr[i]==arr[t1]*2) t1++; 
+            if(arr[i]==arr[t2]*3) t2++;
+            if(arr[i]==arr[t3]*5) t3++;
+        }return arr[n-1];
+    }
+};
