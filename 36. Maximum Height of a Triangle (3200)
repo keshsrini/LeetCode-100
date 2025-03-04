@@ -1,0 +1,16 @@
+class Solution {
+private:
+    int maxHeight(int r,int b,int level,bool isRed){
+        if(r<0||b<0)
+            return level-1;
+        if(isRed)
+            r-=level;
+        else
+            b-=level;
+        return maxHeight(r,b,level+1,!isRed);
+    }
+public:
+    int maxHeightOfTriangle(int red, int blue) {
+        return max(maxHeight(red, blue, 1, true),maxHeight(red, blue, 1, false))-1;
+    }
+};
