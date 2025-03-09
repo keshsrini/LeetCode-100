@@ -1,0 +1,17 @@
+class Solution {
+public:
+    vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid) {
+        int n=grid.size(),size=n*n;
+        vector<int> arr(size+1,0);
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++) {
+                arr[grid[i][j]]++;
+            }
+        }
+        int a=-1,b=-1;
+        for(int i=1;i<=size;i++) {
+            if(arr[i]==2) a=i;
+            else if(arr[i]==0) b=i;
+        }return {a, b};
+    }
+};
