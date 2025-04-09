@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int minOperations(vector<int>& nums, int k) {
+        for(int n:nums) {
+            if(n<k) return -1;
+        }
+        set<int> s;
+        for(int n:nums) {
+            if(n>k) {
+                s.insert(n);
+            }
+        }
+        if(s.empty()) return 0;
+        return s.size();
+    }
+};
+
