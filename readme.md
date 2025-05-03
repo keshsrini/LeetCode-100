@@ -3,4 +3,6 @@
 [Day 3 : Remove Element LC-27](https://github.com/keshsrini/LeetCode-100/blob/main/3.%20Remove%20Element)<br><br />
 [Day 4 : Happy Number LC-202](https://github.com/keshsrini/LeetCode-100/blob/main/4.%20Happy%20Number%20(202))<br><br />
 [Day 5 : Minimum Number Game LC-2974](https://github.com/keshsrini/LeetCode-100/blob/main/5.%20Minimum%20Number%20Game%20(2974))<br><br />
+[Day 6 : Minimum Number Game LC-2974](https://github.com/keshsrini/LeetCode-100/blob/main/5.%20Minimum%20Number%20Game%20(2974))<br><br />
+[Day 7 : Minimum Number Game LC-2974](https://github.com/keshsrini/LeetCode-100/blob/main/5.%20Minimum%20Number%20Game%20(2974))<br><br />
 
