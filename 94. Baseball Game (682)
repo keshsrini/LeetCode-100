@@ -1,1 +1,20 @@
-
+class Solution {
+public:
+    int calPoints(vector<string>& op) {
+        vector<int> res;
+        for(string ch:op){
+            if(!res.empty() && ch=="C") res.pop_back();
+            else if(ch=="D"){
+                int a=res.size()-1;
+                res.push_back(res[a]*2);
+            }else if(ch=="+"){
+                int b=res.size();
+                res.push_back(res[b-1]+res[b-2]);
+            }else res.push_back(stoi(ch));
+        }
+        int sum=0;
+        for(int x:res){
+            sum+=x;
+        }return sum;
+     }
+};
