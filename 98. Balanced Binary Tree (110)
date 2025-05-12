@@ -9,3 +9,18 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+class Solution {
+public:  
+    int fn(TreeNode* node, bool &bal){
+        if(node==NULL||bal==false) return 0;
+        int lh=fn(node->left,bal), rh=fn(node->right,bal);
+        if(abs(lh-rh)>1) bal=false;
+        return max(lh, rh)+1;
+    }   
+    bool isBalanced(TreeNode* root) {
+        bool bal=true;
+        fn(root,bal);
+        return bal;
+    }
+};
