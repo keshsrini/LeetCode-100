@@ -9,3 +9,15 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
+class Solution {
+public:
+    int sumOfLeftLeaves(TreeNode* root, bool l=false) {
+        if(!root) return 0;
+        if(!root->left&&!root->right){
+            if(l) return root->val;
+            else return 0;
+        }
+        return sumOfLeftLeaves(root->left,true) + sumOfLeftLeaves(root->right,false);
+    }
+};
